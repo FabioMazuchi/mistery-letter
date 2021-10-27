@@ -6,18 +6,21 @@ const tamanho = ['medium', 'big', 'reallybig'];
 const rotacao = ['rotateleft', 'rotateright'];
 const iniciacao = ['skewleft', 'skewright'];
 
-btn.addEventListener('click', adicionaSpan);
+function adicionaClasseEstilo(span, array) {
+  const aleatorio = array[Math.round(Math.random() * array.length)];
+  span.classList.add(aleatorio);
+}
 
 function adicionaSpan() {
-  let array = input.value.split(' ');
+  const array = input.value.split(' ');
   p.innerHTML = '';
 
   if (input.value === '' || input.value === ' ') {
     p.innerHTML = 'Por favor, digite o conteúdo da carta.';
   } else {
-    for (let a of array) {
-      let span = document.createElement('span');
-      span.innerHTML = a;
+    for (let a = 0; a < array.length; a += 1) {
+      const span = document.createElement('span');
+      span.innerHTML = array[a];
       adicionaClasseEstilo(span, estilo);
       adicionaClasseEstilo(span, tamanho);
       adicionaClasseEstilo(span, rotacao);
@@ -27,7 +30,4 @@ function adicionaSpan() {
   }
 }
 
-function adicionaClasseEstilo(span, array) {
-  let aleatorio = array[Math.round(Math.random() * array.length)];
-  span.classList.add(aleatorio);
-}
+btn.addEventListener('click', adicionaSpan);
