@@ -6,8 +6,6 @@ const tamanho = ['medium', 'big', 'reallybig'];
 const rotacao = ['rotateleft', 'rotateright'];
 const iniciacao = ['skewleft', 'skewright'];
 
-console.log(Math.round(Math.random() * 67));
-
 btn.addEventListener('click', adicionaSpan);
 
 function adicionaSpan() {
@@ -31,18 +29,5 @@ function adicionaSpan() {
 
 function adicionaClasseEstilo(span, array) {
   let aleatorio = array[Math.round(Math.random() * array.length)];
-  console.log(aleatorio);
   span.classList.add(aleatorio);
 }
-
-// function adicionaClassetamanho (span){
-//     let aleatorio = tamanho[Math.round(Math.random() * tamanho.length)];
-//     console.log(aleatorio);
-//     span.classList.add(aleatorio);
-// }
-
-// function adicionaClasseRotacao (span){
-//     let aleatorio = rotacao[Math.round(Math.random() * tamanho.length)];
-//     console.log(aleatorio);
-//     span.classList.add(aleatorio);
-// }
