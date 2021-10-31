@@ -15,7 +15,7 @@ function contaPalavras() {
     if (array[i] !== '' && array[i].length >= 1) {
       cont += 1;
     }
-    pContador.innerHTML = 'Total de palavras na frase: ' + cont.toString();
+    pContador.innerHTML = cont;
   }
 }
 
