@@ -24,6 +24,20 @@ function adicionaClasseEstilo(span, array) {
   span.classList.add(aleatorio);
 }
 
+const addAllClass = (array) => {
+  for (let a = 0; a < array.length; a += 1) {
+    if (array[a] !== ' ') {
+      const span = document.createElement('span');
+      span.innerHTML = array[a];
+      adicionaClasseEstilo(span, estilo);
+      adicionaClasseEstilo(span, tamanho);
+      adicionaClasseEstilo(span, rotacao);
+      adicionaClasseEstilo(span, iniciacao);
+      p.appendChild(span);
+    }
+  }
+};
+
 function adicionaSpan() {
   let array = input.value.trim();
   array = array.split(' ');
@@ -31,17 +45,7 @@ function adicionaSpan() {
   if (input.value === '' || input.value === ' ') {
     p.innerHTML = 'Por favor, digite o conteúdo da carta.';
   } else {
-    for (let a = 0; a < array.length; a += 1) {
-      if (array[a] !== ' ') {
-        const span = document.createElement('span');
-        span.innerHTML = array[a];
-        adicionaClasseEstilo(span, estilo);
-        adicionaClasseEstilo(span, tamanho);
-        adicionaClasseEstilo(span, rotacao);
-        adicionaClasseEstilo(span, iniciacao);
-        p.appendChild(span);
-      }
-    }
+    addAllClass(array);
   }
 }
 
