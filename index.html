@@ -4,15 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
-    <title>Fabio Ausgusto Mazuchi</title>
+    <title>Mistery Letter</title>
   </head>
 
   <body>
-    <h1>Carta Misteriosa</h1>
-    <input type="text" id="carta-texto" placeholder="Dugite a frase aqui...">
-    <button id="criar-carta">Gerar Carta</button>
-    <p id="carta-contador"></p>
+    <header>
+      <div class="center">
+        <h1>Carta Misteriosa</h1>
+        <p>Total de palavras: <span id="carta-contador">0</span></p>
+      </div>
+    </header>
+    <div class="div">
+      <textarea id="carta-texto" placeholder="Digite o texto aqui..."></textarea>
+      <button id="criar-carta">Gerar Carta</button>
+    </div>
+  
     <p id="carta-gerada"></p>
 
     <script src="script.js"></script>

@@ -4,38 +4,100 @@
   box-sizing: border-box;
 }
 
+.center {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 2%;
+}
+
+html {
+  height: 100%;
+}
+
 body {
-  text-align: center;
-  padding-top: 30px;
-  background-color: rgb(57, 57, 70);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(./images/mystery-envelope.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+header{
+  width: 100%;
+  background-color: #364B54;
+  padding: 9px 0;
+}
+
+header .center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header p {
+  font-size: 18px;
+  color: #E8C284;
 }
 
 h1 {
-  margin-bottom: 15px;
-  font-size: 40px;
-  color: white;
+  font-family: 'Bakbak One', cursive;
+  letter-spacing: 1px;
+  font-style: italic;
+  color: #E8C284;
+  font-weight: lighter;
 }
 
-input {
-  width: 20%;
-  padding: 4px;
+.div {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
 }
 
-input:focus {
+textarea {
+  background-color: #ffffff;
+  height: 120px;
+  padding: 8px;
+  color: #364B54;
+  margin-bottom: 8px;
+  border-radius: 7px;
+  resize: none;
+  border: 0;
+}
+
+::-webkit-input-placeholder { 
+  color: #4c6570;
+}
+ 
+:-ms-input-placeholder { 
+  color: #4c6570;
+}
+
+::placeholder {
+  color: #4c6570;
+} 
+
+textarea:focus {
   outline: none;
 }
 
 button {
   padding: 4px 6px;
-  background-color: tomato;
-  border: 1px solid rgb(224, 66, 38);
+  background-color: #E8C284;
   cursor: pointer;
-  color: white;
+  color: #4c6570;
+  border: 0;
+  font-size: 16PX;
+  border-radius: 6px;
+  font-weight: 600;
+  box-shadow: 3px 3px 5px rgb(116, 112, 112);
 }
 
 #carta-contador {
   font-size: 20px;
-  color: white;
 }
 
 .newspaper {
@@ -90,6 +152,30 @@ button {
   transform: skewX(-10deg);
 }
 
-p {
-  margin-top: 70px;
+#carta-gerada {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 80%;
+  font-size: 22px;
+  color: rgb(82, 71, 71);
+  font-weight: 600;
+}
+
+@media screen and (max-width: 630px) {
+  .div {
+    width: 97%;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  h1 {
+    font-size: 22px;
+  }
+}
+
+
+@media screen and (max-width: 360px) {
+  header .center {
+    flex-direction: column;
+  }
 }
